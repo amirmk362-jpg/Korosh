@@ -1,0 +1,54 @@
+@tailwind base;
+@ًtailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .perspective-1600 {
+    perspective: 1600px;
+  }
+  .perspective-2400 {
+    perspective: 2400px;
+  }
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(ellipse at top, #14120f 0%, #050505 70%);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #caa24a;
+  color: #050505;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#caa24a, #7a1228);
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
